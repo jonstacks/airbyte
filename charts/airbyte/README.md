@@ -72,12 +72,9 @@
 | `server.readinessProbe.successThreshold`    | Success threshold for readinessProbe                             | `1`              |
 | `server.service.type`                       | The service type to use for the API server                       | `ClusterIP`      |
 | `server.service.port`                       | The service port to expose the API server on                     | `8001`           |
-| `server.configs.persistence.accessMode`     | The access mode for the airbyte configs pvc                      | `ReadWriteOnce`  |
-| `server.configs.persistence.storageClass`   | The storage class to use for the airbyte configs pvc             | `standard`       |
-| `server.configs.persistence.size`           | The size of the pvc to use for the airbyte configs pvc           | `500Mi`          |
-| `server.workspace.persistence.accessMode`   | The access mode for the airbyte workspace pvc                    | `ReadWriteOnce`  |
-| `server.workspace.persistence.storageClass` | The storage class to use for the airbyte workspace pvc           | `standard`       |
-| `server.workspace.persistence.size`         | The size of the pvc to use for the airbyte workspace pvc         | `500Mi`          |
+| `server.persistence.accessMode`             | The access mode for the airbyte server pvc                       | `ReadWriteOnce`  |
+| `server.persistence.storageClass`           | The storage class to use for the airbyte server pvc              | `standard`       |
+| `server.persistence.size`                   | The size of the pvc to use for the airbyte server pvc            | `1Gi`            |
 
 
 ### Temporal parameters
@@ -119,3 +116,5 @@
 | `minio.secretKey.password` | Minio Secret Key                                 | `minio123`  |
 | `externalMinio.host`       | Minio Host                                       | `localhost` |
 | `externalMinio.port`       | Minio Port                                       | `9000`      |
+
+
